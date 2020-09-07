@@ -4,34 +4,35 @@ const Conditions = require('./Conditions');
 const Row = require('./Row');
 
 function insert(table, row) {
-    console.log(typeof(row));
+    if(row===undefined||!row instanceof Row)return null;
     return `insert into ${table} values(${row.values_syntax()});`;
 }
-
-function select(table, row, conditions) {
-    if (row !== undefined)
-        if (conditions !== undefined)
-            return `select ${row.columes_syntax()} from ${table} where ${conditions.syntax()}`;
-        else
-            return `select ${row.columes_syntax()} from ${table};`;
-    else if (conditions !== undefined)
-        return `select * from ${table} where ${conditions.syntax()};`;
+function conditionSyntax(condition){
+    if(condition instanceof Condition)
+        return `where ${condition.condition_syntax()}`;
+    else if(condition instanceof Conditions)
+        return `where${condition.syntax()}`;
     else
-        return `select * from ${table};`;
+        return '';
+}
+function select(table, row, conditions) {
+    if(!row instanceof Row ||!conditions instanceof Conditions&&!conditions instanceof Condition)
+        return null;
+    if (row !== undefined)
+        return `select ${row.columes_syntax()} from ${table} ${conditionSyntax(conditions)};`;
+    else
+        return `select * from ${table} ${conditionSyntax(conditions)};`;
 }
 
 function update(table, row, conditions) {
-    if (!row instanceof Row || row === undefined) return null;
-    if (!conditions instanceof Conditions || row === undefined) return null;
-    return `update ${table} set ${row.update_syntax()} where${conditions.syntax()};`;
+    var query=`update ${table} set ${row.update_syntax()}`;
+    if (!row instanceof Row || row === undefined||!conditions instanceof Conditions&&!conditions instanceof Condition) return null;
+    return query+` ${conditionSyntax(conditions)};`;
 }
 
 function _delete(table, conditions) {
-    if (conditions === undefined)
-        return `delete from ${table};`;
-    else
-        return `delete from ${table} where${conditions.syntax()};`;
-}
+    return `delete * from ${table} ${conditionSyntax(conditions)};`;
+  }
 
 module.exports = {
     insert,

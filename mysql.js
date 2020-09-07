@@ -2,7 +2,7 @@ const mysql = require('mysql');
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'yeruham@3341'
+    password: 'your_password'
 });
 const execute = (Command) => {
     return new Promise(function(resolve, reject) {
@@ -17,6 +17,5 @@ const execute = (Command) => {
 }
 
 module.exports = {
-    execute,
-
+    execute
 }
