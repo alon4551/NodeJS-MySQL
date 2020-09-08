@@ -1,6 +1,6 @@
 {
-    "name": "query_builder",
-    "version": "1.0.0",
+    "name": "sqlqueries_builder",
+    "version": "1.0.1",
     "description": "a set of files that help create sql queries with easy setup",
     "main": "index.js",
     "scripts": {
