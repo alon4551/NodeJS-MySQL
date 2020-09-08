@@ -1,6 +1,11 @@
-class Row {
-    constructor(columes) {
+const Colume = require("./Colume");
 
+class Row {
+    /**
+ * @summary A Row in table.
+ * @param {Colume[]} value the Columes in a row.
+ */
+    constructor(columes) {
         this.columes = columes;
     }
     values_syntax() {

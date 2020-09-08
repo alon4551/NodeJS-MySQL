@@ -16,6 +16,4 @@ const execute = (Command) => {
     })
 }
 
-module.exports = {
-    execute
-}
+module.exports = execute;

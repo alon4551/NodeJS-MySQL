@@ -1,7 +1,13 @@
 const Row = require('./Row');
 
 class Conditions extends Row {
-
+/**
+ * @summary A Condition in sql table.
+ * @param {Condition[]} Conditions the conditions list.
+ * @param {String} sperate the word that sperate between condition can be :
+ * And
+ * Or.
+ */
     constructor(columes, sperate) {
         super(columes);
         this.sperate = sperate;
