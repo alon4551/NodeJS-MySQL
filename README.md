@@ -3,13 +3,13 @@ This are files that help a developer create their own SQL queries without having
 For this projects there are **4** basic classes that help build the SQL Queries:
 - Colume
 - Row
-- builder
+- builder (function)
 - Condition
 - Conditions
 
 # Getting Started
-1. npm install sqlqueries_builder --save
-2. install the microsoft Access DB engine https://www.microsoft.com/en-us/download/details.
+1. npm install `sqlqueries_builder --save`
+2. extract like `const {Colume,Row,Condition,Conditions,builder}=require('sqlqueries_builder');`
 
 ## Class **Colume** 
 Represent a *Column* in Database, each column has a value and a field name
@@ -67,3 +67,4 @@ spearte // the type of list of Conditions
 2. `_delete` return a sql delete string
 3. `update` return a sql update string
 4. `select` return a sql select string
+
