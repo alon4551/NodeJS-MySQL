@@ -1,19 +1,19 @@
 {
-  "name": "sql_builder",
-  "version": "1.0.0",
-  "description": "a set of files that help create sql queries with easy setup",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alon4551/NodeJS-MySQL.git"
-  },
-  "author": "Alon Shraybman",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alon4551/NodeJS-MySQL/issues"
-  },
-  "homepage": "https://github.com/alon4551/NodeJS-MySQL#readme"
+    "name": "query_builder",
+    "version": "1.0.0",
+    "description": "a set of files that help create sql queries with easy setup",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alon4551/NodeJS-MySQL.git"
+    },
+    "author": "Alon Shraybman",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/alon4551/NodeJS-MySQL/issues"
+    },
+    "homepage": "https://github.com/alon4551/NodeJS-MySQL#readme"
 }
