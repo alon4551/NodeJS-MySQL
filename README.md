@@ -8,7 +8,7 @@ For this projects there are **4** basic classes that help build the SQL Queries:
 - Conditions
 
 # Getting Started
-1. npm install sql_builder --save
+1. npm install sqlqueries_builder --save
 2. install the microsoft Access DB engine https://www.microsoft.com/en-us/download/details.
 
 ## Class **Colume** 
