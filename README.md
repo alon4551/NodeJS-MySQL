@@ -67,9 +67,3 @@ spearte // the type of list of Conditions
 2. `_delete` return a sql delete string
 3. `update` return a sql update string
 4. `select` return a sql select string
-
-# Examples
-1. insert
- ```js
-
-```
